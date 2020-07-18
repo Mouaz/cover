@@ -25,11 +25,6 @@ jobs:
     - name: installing packages
       run: npm install
       working-directory: ${{env.working-directory}}
-      
-    - name: installing angular cli
-      run: |
-        npm install -g @angular/cli --latest
-        ng config -g cli.warnings.versionMismatch false
  
     - name: linting
       run: npm run lint
