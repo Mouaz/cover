@@ -21,11 +21,15 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-      
+  
     - name: installing packages
       run: npm install
       working-directory: ${{env.working-directory}}
       
+    - name: installing angular cli
+      run:   npm install -g angular-cli   
+      working-directory: ${{env.working-directory}}
+ 
     - name: linting
       run: ng lint
       working-directory: ${{env.working-directory}}
