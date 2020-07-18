@@ -36,5 +36,5 @@ jobs:
       working-directory: ${{env.working-directory}}
       
     - name: testing
-      run: npm run test --browsers ChromeHeadless --watch=false
+      run: npm run test
       working-directory: ${{env.working-directory}}
