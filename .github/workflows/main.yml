@@ -32,13 +32,13 @@ jobs:
         ng config -g cli.warnings.versionMismatch false
  
     - name: linting
-      run: ng lint
+      run: npm run lint
       working-directory: ${{env.working-directory}}
       
     - name: testing
-      run: ng test
+      run: npm run test
       working-directory: ${{env.working-directory}}
       
     - name: building
-      run: ng build --prod
+      run: npm run build --prod
       working-directory: ${{env.working-directory}}
