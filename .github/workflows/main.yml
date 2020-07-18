@@ -30,10 +30,11 @@ jobs:
       run: npm run lint
       working-directory: ${{env.working-directory}}
       
-    - name: testing
-      run: npm run test
-      working-directory: ${{env.working-directory}}
       
     - name: building
       run: npm run build --prod
+      working-directory: ${{env.working-directory}}
+      
+    - name: testing
+      run: npm run test --browsers ChromeHeadless --watch=false
       working-directory: ${{env.working-directory}}
